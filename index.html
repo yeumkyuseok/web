@@ -5,22 +5,38 @@
         <meta charset="utf-8">
         <h1>Hi welcome to Developer Kyu's portpolio!</h1>
     </head>
-    <body style="background-color:black; color:white;">
+    <body data-mode="">
+        <input id="night_day2" type="button" value="night" onclick="
+            var target = document.querySelector('body');
+            if(this.value === 'night'){
+                target.style.backgroundColor = 'grey';
+                target.style.Color = 'white';
+                target.dataset.mode = 'night';
+                this.value = 'day';
+            } else {
+                target.style.backgroundColor = 'white';
+                target.style.Color = 'black';
+                target.dataset.mode = 'day';
+                this.value = 'night';
+            }
+        ">
+
         <p> <br><br>
             <h3><a href="1.html">Resume</a></h3>
-            <img src="book.png" width="5%">
+            <img class="image" src="book.png" width="5%">
         </p>
 
         <p> <br><br><br>
             <h3><a href="2.html">Personal Information</a></h3>
-            <img src="user.png" width="5%">
+            <img class="image" src="user.png" width="5%">
         </p>
 
         <p> <br><br><br>
             <h3><a href="3.html">Thoughs & Diary</a></h3>
-            <img src="diary.png" width="5%">
+            <img class="image" src="diary.png" width="5%">
         </p>
 
+        
 
     </body>
 </html>
